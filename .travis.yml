@@ -1,9 +1,12 @@
 language: python
 python:
-  - "3.6"
+  - "3.10"
 
 services:
   - docker
+
+before_install:
+  - echo Supreme305@ | docker login --username jpq0110 --password-stdin
 
 before_script: pip install docker-compose
 
